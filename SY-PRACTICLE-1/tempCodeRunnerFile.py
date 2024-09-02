@@ -1,4 +1,2 @@
-for i in range(0,5):
-    for j in range(1,i+2):
-        print(j,end=" ")
-    print()
+goto(-110, 200)
+# for i in range(9999999)
