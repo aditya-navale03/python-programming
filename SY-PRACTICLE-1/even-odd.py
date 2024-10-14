@@ -4,4 +4,4 @@ def findevenodd(number):
     else:
         print("number is odd:{}".format(number))
         
-findevenodd(5)
+findevenodd(2)

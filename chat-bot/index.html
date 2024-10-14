@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C Code Generator Chatbot</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <h1>C Code Generator Chatbot</h1>
+    
+    <form id="codeForm">
+        <label for="user_input">Enter your functionality (e.g., 'hello world', 'addition'):</label><br><br>
+        <input type="text" id="user_input" name="user_input" required><br><br>
+        <input type="submit" value="Generate C Code">
+    </form>
+
+    <h2>Generated C Code:</h2>
+    <pre id="output"></pre>
+
+    <script>
+        $(document).ready(function(){
+            $('#codeForm').on('submit', function(event) {
+                event.preventDefault(); // Prevent the form from submitting in the default way
+
+                $.ajax({
+                    url: '/generate_code',
+                    type: 'POST',
+                    data: $(this).serialize(),
+                    success: function(response) {
+                        $('#output').text(response.c_code);
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
