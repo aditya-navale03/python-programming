@@ -1,0 +1,10 @@
+def argument(number):
+    print("double the number:", number * 2)
+    print()
+    print("triple the number:",  number * 3)
+    print()
+    print("quadruple the number:",   number * 4)
+    print()
+    print("quintuple the number:",  number * 5)
+    print() 
+argument(15)
