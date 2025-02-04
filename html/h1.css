@@ -1,0 +1,36 @@
+.plant-list {
+    list-style-type: none; /* Remove default bullet points */
+    padding: 0;
+}
+
+.group {
+    font-size: 1.2em; /* Larger font for group names */
+    margin-bottom: 0.5em; /* Space between groups */
+    color: #333; /* Dark gray color */
+}
+
+.sublist {
+    list-style-type: circle; /* Use circle bullets for sublists */
+    margin-left: 20px; /* Indent sublists */
+}
+
+.sublist li:nth-child(1) {
+    font-size: 1em; /* First item size */
+    color: #005f6a; /* Teal color */
+}
+
+.sublist li:nth-child(2) {
+    font-size: 0.9em; /* Second item size */
+    color: #dd4c57; /* Red color */
+}
+
+/* Rose sublist styles */
+.sublist li.rose-item:nth-child(1) {
+    font-size: 0.8em;
+    color: #c00000; /* Darker red */
+}
+
+.sublist li.rose-item:nth-child(2) {
+    font-size: 0.8em;
+    color: #ff69b4; /* Pink color */
+}
